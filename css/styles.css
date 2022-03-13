@@ -1,0 +1,171 @@
+:root{
+    --roboto: 'Roboto', sans-serif;
+
+}
+
+
+body{
+    background-color: #fcfcfc;
+    font-family: var(--roboto);
+}
+
+h3, .pokemon-id{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.card{
+    color: white;
+    display: flex;
+    flex-flow: row-reverse;
+    border-radius: 10px;
+    background-color: #f7f1f8;
+    overflow: hidden;
+    width: 100%;
+    padding: .5rem;
+    box-shadow: 0px 0px 15px 0px rgba(158, 158, 158, 0.5);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(158, 158, 158, 0.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(158, 158, 158, 0.5);
+}
+
+.image-container{
+    width: 45%;
+    background-image: url(/images/pokeball.svg);
+}
+
+.image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-container{
+    width: 55%;
+    padding: .5rem;
+}
+
+.info-container-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 1rem;
+}
+
+.pokemon-name{
+    text-transform: capitalize;
+}
+
+.text-info{
+    margin-block-end: .5rem;
+    text-transform: capitalize;
+    background-color: rgba(255,255,255,.3);
+    width: 60%;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* -- pokemon color types -- */
+.normal{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(193,193,193,.65) 100%);
+}
+
+.fire{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(255,196,0,.65) 100%);
+}
+
+.water{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(0,112,255,.65) 100%);
+}
+
+.grass{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 100%);
+}
+
+.electric{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(255,222,0,.65) 100%);
+}
+
+.ice{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(230,251,255,.65) 100%);
+}
+
+.fighting{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(221,36,0,.65) 100%);
+}
+
+.poison{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 100%);
+}
+
+.ground{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(255,149,0,.65) 100%);
+}
+
+.flying{
+    background: rgb(126,208,235);
+    background: linear-gradient(120deg, rgba(126,208,235,.65) 0%, rgba(211,185,255,.65) 100%);
+}
+
+.psychic{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 100%);
+}
+
+.bug{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%, rgba(119,136,28,.65) 100%);
+}
+
+.rock{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(227,227,227,.65) 100%);
+}
+
+.ghost{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(119,68,170,.65) 100%);
+}
+
+.dark{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 100%);
+}
+
+.dragon{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 100%);
+}
+
+.steel{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 100%);
+}
+
+.fairy{
+    background: rgb(255,158,219);
+    background: linear-gradient(120deg, rgba(255, 146, 215, 0.65) 0%, rgba(255, 219, 237, 0.65) 100%);
+}
