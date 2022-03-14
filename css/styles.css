@@ -9,14 +9,86 @@ body{
     font-family: var(--roboto);
 }
 
+/* header styles */
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #e63946;
+    color: #fcfcfc;
+    margin-block-end: 1rem;
+}
+
+header .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+h1{
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="text"]{
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color: #fcfcfc;
+    padding: .5rem;
+}
+
+/* header search bar */
+
+.autocomplete-box {
+    position: absolute;
+    max-height: 580px;
+    overflow-y: scroll;
+    /* z-index: 2; */
+}
+
+.autocomplete-box li{
+    list-style: none;
+    width: 300px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fcfcfc;
+    color: #575756;
+}
+
+
+.autocomplete-box li div {
+    height: 100%;
+}
+
+.autocomplete-box li div img {
+    object-fit: fill;
+    width: 100px;
+}
+
+.autocomplete-box li div:nth-child(2) {
+    width: 150px;
+    padding-block: 35px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 h3, .pokemon-id{
     font-size: 16px;
     font-weight: 900;
-}
-
-p{
-    font-size: 14px;
-    font-weight: 700;
 }
 
 .container{
@@ -70,6 +142,13 @@ p{
     text-transform: capitalize;
 }
 
+.info-container-types{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .text-info{
     margin-block-end: .5rem;
     text-transform: capitalize;
@@ -85,9 +164,109 @@ p{
     background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(193,193,193,.65) 100%);
 }
 
+.normal-fighting{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(148,0,0,.65) 100%);
+}
+
+.normal-ground{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(148,117,0,.65) 100%);
+}
+
+.normal-dragon{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%,  rgba(95,69,208,.65) 75%, rgba(197,167,255,.65) 100% );
+}
+
+.normal-water{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%,  rgba(0,112,255,.65) 75%, rgba(0,2,116,.65) 100% );
+}
+
+.normal-grass{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%,  rgba(201,255,79,.65) 75%, rgba(75,126,0,.65) 100%);
+}
+
+.normal-flying{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.normal-fairy{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.normal-psychic{
+    background: rgb(193,193,193);
+    background: linear-gradient(120deg, rgba(133,109,93,.65) 0%, rgba(193,193,193,.65) 50%, rgba(235,126,192,.65) 100%);
+}
+
 .fire{
     background: rgb(255,196,0);
     background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(255,196,0,.65) 100%);
+}
+
+.fire-bug{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(138,124,14,.65) 100%); 
+}
+
+.fire-ghost{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(119,68,170,.65) 75%, rgba(20,7,75,.65) 100%);
+}
+
+.fire-dragon{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(95,69,208,.65) 75%, rgba(197,167,255,.65) 100%);
+}
+
+.fire-dark{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(42,42,42,.65) 100%);
+}
+
+.fire-water{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(255,196,0,.65) 50%, rgba(0,112,255,.65) 75%, rgba(0,2,116,.65) 100%);
+}
+
+.fire-normal{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(133,109,93,.65) 75%, rgba(193,193,193,.65) 100%);
+}
+
+.fire-steel{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(178,175,190,.65) 100%);
+}
+
+.fire-psychic{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(235,126,192,.65) 50%, rgba(211,185,255,.65) 100%);
+}
+
+.fire-flying{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.fire-rock{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(107,107,107,.65) 100%);
+}
+
+.fire-fighting{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(148,0,0,.65) 100%);
+}
+
+.fire-ground{
+    background: rgb(255,196,0);
+    background: linear-gradient(120deg,  rgba(255,106,0,.65) 0%, rgba(148,117,0,.65) 100%);
 }
 
 .water{
@@ -95,9 +274,139 @@ p{
     background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(0,112,255,.65) 100%);
 }
 
+.water-bug{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(138,124,14,.65) 100%);
+}
+
+.water-ghost{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,112,255,.65) 0%,rgba(119,68,170,.65) 75%, rgba(20,7,75,.65) 100%);
+}
+
+.water-fighting{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(148,0,0,.65) 100%);
+}
+
+.water-flying{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(126,208,235,.65) 100%);
+}
+
+.water-poison{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(72,0,148,.65) 100%);
+}
+
+.water-psychic{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(235,126,192,.65) 100%);
+}
+
+.water-ice{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(0,202,255,.65) 100%);
+}
+
+.water-electric{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%,  rgba(255,179,0,.65) 100%);
+}
+
+.water-fairy{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.water-ground{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(148,117,0,.65) 100%);
+}
+
+.water-rock{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(107,107,107,.65) 100%);
+}
+
+.water-dragon{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(95,69,208,.65) 100%);
+}
+
+.water-grass{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(75,126,0,.65) 100%);
+}
+
+.water-dark{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(42,42,42,.65) 100%);
+}
+
+.water-steel{
+    background: rgb(0,112,255);
+    background: linear-gradient(120deg, rgba(0,2,116,.65) 0%, rgba(0,112,255,.65) 50%, rgba(178,175,190,.65) 100%);
+}
+
 .grass{
     background: rgb(75,126,0);
     background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 100%);
+}
+
+.grass-dragon{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 50%, rgba(95,69,208,.65) 75%, rgba(197,167,255,.65) 100%);
+}
+
+.grass-ghost{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 50%, rgba(119,68,170,.65) 75%,rgba(20,7,75,.65) 100% );
+}
+
+.grass-steel{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 50%, rgba(178,175,190,.65) 100%);
+}
+
+.grass-ice{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 50%, rgba(0,202,255,.65) 100%);
+}
+
+.grass-fairy{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 50%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.grass-ground{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(201,255,79,.65) 50%, rgba(148,117,0,.65) 100%);
+}
+
+.grass-poison{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(72,0,148,.65) 100%);
+}
+
+.grass-psychic{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(235,126,192,.65) 100%);
+}
+
+.grass-flying{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.grass-dark{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(42,42,42,.65) 100%);
+}
+
+.grass-fighting{
+    background: rgb(75,126,0);
+    background: linear-gradient(120deg, rgba(75,126,0,.65) 0%, rgba(148,0,0,.65) 100%);
 }
 
 .electric{
@@ -105,9 +414,84 @@ p{
     background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(255,222,0,.65) 100%);
 }
 
+.electric-dark{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(42,42,42,.65) 100%);
+}
+
+.electric-dragon{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(72,0,148,.65) 50%, rgba(95,69,208,.65) 75%, rgba(197,167,255,.65) 100%);
+}
+
+.electric-ice{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(0,202,255,.65) 100%);
+}
+
+.electric-poison{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(72,0,148,.65) 100%);
+}
+
+.electric-fairy{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.electric-normal{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(255,222,0,.65) 75%, rgba(133,109,93,.65) 100%);
+}
+
+.electric-ghost{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(119,68,170,.65) 50%, rgba(20,7,75,.65) 100%);
+}
+
+.electric-steel{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(178,175,190,.65) 100%);
+}
+
+.electric-flying{
+    background: rgb(255,222,0);
+    background: linear-gradient(120deg, rgba(255,179,0,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
 .ice{
     background: rgb(0,202,255);
     background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(230,251,255,.65) 100%);
+}
+
+.ice-bug{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(138,124,14,.65) 100%);
+}
+
+.ice-ghost{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(119,68,170,.65) 50%, rgba(20,7,75,.65) 100%);
+}
+
+.ice-water{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(0,2,116,.65) 100%);
+}
+
+.ice-psychic{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(235,126,192,.65) 100%);
+}
+
+.ice-flying{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.ice-ground{
+    background: rgb(0,202,255);
+    background: linear-gradient(120deg, rgba(0,202,255,.65) 0%, rgba(148,117,0,.65) 100%);
 }
 
 .fighting{
@@ -115,9 +499,79 @@ p{
     background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(221,36,0,.65) 100%);
 }
 
+.fighting-ghost{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(119,68,170,.65) 50%, rgba(20,7,75,.65) 100%);
+}
+
+.fighting-ice{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(0,202,255,.65) 75%, rgba(230,251,255,.65) 100%);
+}
+
+.fighting-flying{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(126,208,235,.65) 100% );
+}
+
+.fighting-psychic{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(235,126,192,.65) 50%, rgba(211,185,255,.65) 100%);
+}
+
+.fighting-dark{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(7,0,37,.65) 75%, rgba(42,42,42,.65) 100%);
+}
+
+.fighting-steel{
+    background: rgb(148,0,0);
+    background: linear-gradient(120deg, rgba(148,0,0,.65) 0%, rgba(178,175,190,.65) 100%);
+}
+
 .poison{
     background: rgb(72,0,148);
     background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 100%);
+}
+
+.poison-dragon{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 50%, rgba(197,167,255,.65) 75%, rgba(95,69,208,.65) 100% );
+}
+
+.poison-fire{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 50%, rgba(255,106,0,.65) 100%);
+}
+
+.poison-dark{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 50%, rgba(42,42,42,.65) 100%);
+}
+
+.poison-bug{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 50%, rgba(138,124,14,.65) 100%);
+}
+
+.poison-fighting{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 50%, rgba(148,0,0,.65) 100%);
+}
+
+.poison-water{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(163,0,221,.65) 50%, rgba(0,112,255,.65) 75%,  rgba(0,2,116,.65) 100%);
+}
+
+.poison-flying{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.poison-ground{
+    background: rgb(72,0,148);
+    background: linear-gradient(120deg, rgba(72,0,148,.65) 0%, rgba(148,117,0,.65) 100%);
 }
 
 .ground{
@@ -125,9 +579,64 @@ p{
     background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(255,149,0,.65) 100%);
 }
 
+.ground-steel{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(178,175,190,.65) 100%);
+}
+
+.ground-ghost{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(20,7,75,.65) 100%);
+}
+
+.ground-electric{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(255,179,0,.65) 100%);
+}
+
+.ground-dark{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(42,42,42,.65) 100%);
+}
+
+.ground-rock{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(107,107,107,.65) 100%);
+}
+
+.ground-flying{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.ground-dragon{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(95,69,208,.65) 100%);
+}
+
+.ground-psychic{
+    background: rgb(148,117,0);
+    background: linear-gradient(120deg, rgba(148,117,0,.65) 0%, rgba(235,126,192,.65) 50%, rgba(211,185,255,.65) 100%);
+}
+
 .flying{
     background: rgb(126,208,235);
     background: linear-gradient(120deg, rgba(126,208,235,.65) 0%, rgba(211,185,255,.65) 100%);
+}
+
+.flying-water{
+    background: rgb(126,208,235);
+    background: linear-gradient(120deg, rgba(126,208,235,.65) 0%, rgba(0,2,116,.65) 100%);
+}
+
+.flying-dragon{
+    background: rgb(126,208,235);
+    background: linear-gradient(120deg, rgba(126,208,235,.65) 0%, rgba(95,69,208,.65) 100%);
+}
+
+.flying-steel{
+    background: rgb(126,208,235);
+    background: linear-gradient(120deg, rgba(126,208,235,.65) 0%, rgba(178,175,190,.65) 100%);
 }
 
 .psychic{
@@ -135,9 +644,114 @@ p{
     background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 100%);
 }
 
+.psychic-normal{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 50%, rgba(133,109,93,.65) 100%);
+}
+
+.psychic-steel{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 50%, rgba(178,175,190,.65) 100%);
+}
+
+.psychic-fire{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 50%, rgba(255,106,0,.65) 100%);
+}
+
+.psychic-ghost{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 50%, rgba(119,68,170,.65) 75%,rgba(20,7,75,.65) 100%);
+}
+
+.psychic-fighting{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65) 50%, rgba(148,0,0,.65) 100%);
+}
+
+.psychic-fairy{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65)  50%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.psychic-flying{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65)  50%,rgba(126,208,235,.65) 100%);
+}
+
+.psychic-grass{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(235,126,192,.65) 0%, rgba(211,185,255,.65)  50%,rgba(75,126,0,.65) 100%);
+}
+
 .bug{
     background: rgb(119,136,28);
     background: linear-gradient(120deg, rgba(138,124,14,.65) 0%, rgba(119,136,28,.65) 100%);
+}
+
+.bug-psychic{
+    background: rgb(235,126,192);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(235,126,192,.65) 50%, rgba(211,185,255,.65)  100%);
+}
+
+.bug-fairy{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.bug-fire{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(255,106,0,.65) 100%);
+}
+
+.bug-electric{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(255,179,0,.65) 100%);
+}
+
+.bug-flying{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(126,208,235,.65) 100%);
+}
+
+.bug-grass{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(75,126,0,.65) 100%);
+}
+
+.bug-poison{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(72,0,148,.65) 100%);
+}
+
+.bug-steel{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(178,175,190,.65) 100%);
+}
+
+.bug-rock{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(107,107,107,.65) 100%);
+}
+
+.bug-fighting{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(148,0,0,.65) 100%);
+}
+
+.bug-water{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(0,2,116,.65) 100%);
+}
+
+.bug-ground{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(119,136,28,.65) 50%, rgba(148,117,0,.65) 100%);
+}
+
+.bug-ghost{
+    background: rgb(119,136,28);
+    background: linear-gradient(120deg, rgba(138,124,14,.65) 0%,rgba(20,7,75,.65) 100%);
 }
 
 .rock{
@@ -145,9 +759,119 @@ p{
     background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(227,227,227,.65) 100%);
 }
 
+.rock-fire{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(255,106,0,.65) 100%);
+}
+
+.rock-poison{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(72,0,148,.65) 100%);
+}
+
+.rock-fairy{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.rock-ice{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(0,202,255,.65) 75%, rgba(230,251,255,.65) 100%);
+}
+
+.rock-dragon{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(197,167,255,.65) 75%, rgba(95,69,208,.65) 100%, );
+}
+
+.rock-fighting{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(148,0,0,.65) 100%);
+}
+
+.rock-grass{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(75,126,0,.65) 100%);
+}
+
+.rock-bug{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(138,124,14,.65) 100%);
+}
+
+.rock-psychic{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(235,126,192,.65) 50%, rgba(211,185,255,.65) 100%);
+}
+
+.rock-ground{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(148,117,0,.65) 100%);
+}
+
+.rock-water{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(0,2,116,.65) 100%);
+}
+
+.rock-flying{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.rock-dark{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(42,42,42,.65) 100%);
+}
+
+.rock-steel{
+    background: rgb(107,107,107);
+    background: linear-gradient(120deg, rgba(107,107,107,.65) 0%, rgba(42,42,42,.65) 50%, rgba(178,175,190,.65) 100% );
+}
+
 .ghost{
     background: rgb(20,7,75);
     background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(119,68,170,.65) 100%);
+}
+
+.ghost-fairy{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(119,68,170,.65) 75%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.ghost-ground{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(119,68,170,.65) 75%, rgba(148,117,0,.65) 100%);
+}
+
+.ghost-grass{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(119,68,170,.65) 75%, rgba(201,255,79,.65) 100%);
+}
+
+.ghost-poison{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(72,0,148,.65)  100%);
+}
+
+.ghost-fire{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(72,0,148,.65)  50%, rgba(255,106,0,.65) 100%);
+}
+
+.ghost-flying{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(72,0,148,.65)  50%, rgba(126,208,235,.65) 100%);
+}
+
+.ghost-dark{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(72,0,148,.65)  50%, rgba(42,42,42,.65) 100%);
+}
+
+.ghost-dragon{
+    background: rgb(20,7,75);
+    background: linear-gradient(120deg, rgba(20,7,75,.65) 0%, rgba(72,0,148,.65)  50%, rgba(95,69,208,.65) 100%);
 }
 
 .dark{
@@ -155,9 +879,104 @@ p{
     background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 100%);
 }
 
+.dark-grass{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%, rgba(75,126,0,.65) 100%);
+}
+
+.dark-normal{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%, rgba(133,109,93,.65) 100%);
+}
+
+.dark-fairy{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.dark-psychic{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%, rgba(235,126,192,.65) 75%, rgba(211,185,255,.65) 100%);
+}
+
+.dark-flying{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(126,208,235,.65) 100%);
+}
+
+.dark-fighting{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(148,0,0,.65) 100%);
+}
+
+.dark-ice{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(0,202,255,.65) 100%);
+}
+
+.dark-fire{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(255,106,0,.65) 100%);
+}
+
+.dark-ghost{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(20,7,75,.65) 100%);
+}
+
+.dark-steel{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(178,175,190,.65) 100%);
+}
+
+.dark-dragon{
+    background: rgb(7,0,37);
+    background: linear-gradient(120deg, rgba(7,0,37,.65) 0%, rgba(42,42,42,.65) 50%,rgba(95,69,208,.65) 75%, rgba(197,167,255,.65) 100%);
+}
+
 .dragon{
     background: rgb(95,69,208);
     background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 100%);
+}
+
+.dragon-ghost{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 50%, rgba(20,7,75,.65) 100%);
+}
+
+.dragon-fighting{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 50%, rgba(148,0,0,.65) 100%);
+}
+
+.dragon-electric{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 50%, rgba(255,179,0,.65) 100%);
+}
+
+.dragon-fire{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 50%, rgba(255,106,0,.65) 100%);
+}
+
+.dragon-ice{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(197,167,255,.65) 50%, rgba(0,202,255,.65) 100%);
+}
+
+.dragon-flying{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(126,208,235,.65) 100%);
+}
+
+.dragon-psychic{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(235,126,192,.65) 50%, rgba(211,185,255,.65) 100%);
+}
+
+.dragon-ground{
+    background: rgb(95,69,208);
+    background: linear-gradient(120deg, rgba(95,69,208,.65) 0%, rgba(148,117,0,.65) 100%);
 }
 
 .steel{
@@ -165,7 +984,52 @@ p{
     background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 100%);
 }
 
+.steel-ghost{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(119,68,170,.65) 75%, rgba(20,7,75,.65) 100%);
+}
+
+.steel-ground{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 50%, rgba(148,117,0,.65) 100%);
+}
+
+.steel-fighting{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 50%, rgba(148,0,0,.65) 100%);
+}
+
+.steel-flying{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 50%, rgba(126,208,235,.65) 100%);
+}
+
+.steel-fairy{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 50%, rgba(255, 146, 215, 0.65) 100%);
+}
+
+.steel-rock{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(171,176,179,.65) 50%, rgba(107,107,107,.65) 100%);
+}
+
+.steel-psychic{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(235,126,192,.65) 50%, rgba(211,185,255,.65) 100%);
+}
+
+.steel-dragon{
+    background: rgb(178,175,190);
+    background: linear-gradient(120deg, rgba(178,175,190,.65) 0%, rgba(197,167,255,.65) 50%, rgba(95,69,208,.65) 100% );
+}
+
 .fairy{
     background: rgb(255,158,219);
     background: linear-gradient(120deg, rgba(255, 146, 215, 0.65) 0%, rgba(255, 219, 237, 0.65) 100%);
+}
+
+.fairy-flying{
+    background: rgb(255,158,219);
+    background: linear-gradient(120deg, rgba(255, 146, 215, 0.65) 0%, rgba(126,208,235,.65) 100%);
 }
