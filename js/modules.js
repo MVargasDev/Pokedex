@@ -54,6 +54,7 @@ export function createCard(image, id, name, fistType, secondType){
 
 export function fillSearchBar(image, id, name){
     const listItem = document.createElement('li')
+    listItem.dataset.name = name
 
     const listItem_ImageContainer = document.createElement('div')
     const listItem_Image = document.createElement('img')

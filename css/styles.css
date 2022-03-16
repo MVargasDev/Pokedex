@@ -149,6 +149,10 @@ h3, .pokemon-id{
     font-weight: 700;
 }
 
+.not-show{
+    display: none;
+}
+
 .text-info{
     margin-block-end: .5rem;
     text-transform: capitalize;

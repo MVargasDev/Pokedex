@@ -10,7 +10,7 @@ const primaryType = 0
 const secondaryType = 1
 
 async function getPokemons(){
-    const response = await ky.get(`${BASE_API_URL}/?limit=25"`).json()
+    const response = await ky.get(`${BASE_API_URL}/?limit=25&offset=25"`).json()
     
     const { results } = response
 
@@ -27,33 +27,29 @@ async function getPokemons(){
         mainContainer.appendChild(card)
         backgroundColor(type, card)
 
+        let item = fillSearchBar(sprites.other.home.front_default, id, name)
+        searchBarItemsContainer.appendChild(item)
+        searchBarItemsContainer.classList.add('not-show')
+
         searchBar.addEventListener('keyup', filtrarElemento)
 
     }
 
-    async function filtrarElemento(){
+    function filtrarElemento(){
         const textValue = searchBar.value.split(" ").join("").toLowerCase()
-        searchBarItemsContainer.innerHTML = ''
+        searchBarItemsContainer.classList.remove('not-show')
 
-        const searchCharacterByName = await ky.get(`${BASE_API_URL}/?limit=151`).json()
-        const {results} = searchCharacterByName
-
-        for(let result of results){
-            const charName = result.name.split(" ").join("").toLowerCase()
-
-            const data = await ky.get(`${BASE_API_URL}/${charName}/`).json()
-            const {sprites, id, name} = data
-
-            if(charName.indexOf(textValue) != -1 ){
-                let item = fillSearchBar(sprites.other.home.front_default, id, name)
-                searchBarItemsContainer.appendChild(item)
-                // mainContainer.classList.add('overlay')
+        let listItems = document.querySelectorAll('li')
+        listItems.forEach(element => {
+            let pokemonName = element.dataset.name
+            element.style.display='none'
+            if(pokemonName.indexOf(textValue) != -1 ){
+                element.style.display = 'flex'
             } 
             if(textValue === ""){
-                searchBarItemsContainer.innerHTML = ''
-                // mainContainer.classList.remove('overlay')
+                searchBarItemsContainer.classList.add('not-show')
             }
-        }
+        });
     }  
 }
 
