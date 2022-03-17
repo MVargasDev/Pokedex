@@ -118,7 +118,6 @@ h3, .pokemon-id{
 
 .image-container{
     width: 45%;
-    background-image: url(/images/pokeball.svg);
 }
 
 .image{
@@ -160,6 +159,35 @@ h3, .pokemon-id{
     width: 60%;
     text-align: center;
     border-radius: 50px;
+}
+
+/* -- modal dialog -- */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #575756bd;
+    display: flex;
+    pointer-events: none;
+}
+
+.modal-container{
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    max-width: 600px;
+    background-color: #fcfcfc;
+}
+
+.modal-image-container{
+    width: 100%;
+}
+
+.modal--show{
+    pointer-events: unset;
 }
 
 /* -- pokemon color types -- */

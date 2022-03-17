@@ -2,6 +2,7 @@ export function createCard(image, id, name, fistType, secondType){
     // we create the card
     const card = document.createElement('div')
     card.dataset.id = id
+    card.dataset.name = name
     card.classList.add('card')
     // we create the image container 
     const imageContainer = document.createElement('div')
@@ -71,6 +72,66 @@ export function fillSearchBar(image, id, name){
     listItem.appendChild(listItem_InfoContainer)
 
     return listItem
+}
+
+export function createModal(id, name, image, type){
+    // we create the modal screen
+    const modal = document.createElement('div')    
+    modal.classList.add('modal')
+    // we create the modal container
+    const modalContainer = document.createElement('div')
+    modalContainer.dataset.id = id
+    modalContainer.dataset.name = name
+    modalContainer.classList.add('modal-container')
+    // we create the image container 
+    const modalImageContainer = document.createElement('div')
+    modalImageContainer.classList.add('modal-image-container')
+    backgroundColor(type, modalImageContainer)
+    // here we create the image
+    const officialArt = document.createElement('img')
+    officialArt.classList.add('image')
+    officialArt.src = image
+    // we add the image to the image container
+    modalImageContainer.appendChild(officialArt)
+    // // we create the info container
+    // const infoContainer = document.createElement('div')
+    // infoContainer.classList.add('info-container')
+    // // heading pokemon id plus name
+    // const infoContainerHeading = document.createElement('div')
+    // infoContainerHeading.classList.add('info-container-heading')
+    // // pokemon id #
+    // const pokemonId = document.createElement('span')
+    // pokemonId.textContent = '#' + id
+    // pokemonId.classList.add('pokemon-id')
+    // infoContainerHeading.appendChild(pokemonId)
+    // // pokemon name
+    // const pokemonName = document.createElement('h3')
+    // pokemonName.textContent = name
+    // pokemonName.classList.add('pokemon-name')
+    // infoContainerHeading.appendChild(pokemonName)
+    // // adding headinto info container
+    // infoContainer.appendChild(infoContainerHeading)
+    // // adding type content div
+    // const infoContainerType = document.createElement('div')
+    // infoContainerType.classList.add('info-container-types')
+    // // pokemon primary and secondary type
+    // const pokemonPrimaryType = document.createElement('span')
+    // pokemonPrimaryType.textContent = fistType
+    // pokemonPrimaryType.classList.add('text-info')
+    // infoContainerType.appendChild(pokemonPrimaryType)
+    // const pokemonSecondaryType = document.createElement('span')
+    // pokemonSecondaryType.textContent = secondType
+    // pokemonSecondaryType.classList.add('text-info')
+    // infoContainerType.appendChild(pokemonSecondaryType)
+    // // adding type info to the info container
+    // infoContainer.appendChild(infoContainerType)
+    
+    // we add the image container and the info container to the card
+    modalContainer.appendChild(modalImageContainer)
+    // modal.appendChild(infoContainer)
+
+    modal.appendChild(modalContainer)
+    return modal
 }
 
 export function backgroundColor(type, card){
