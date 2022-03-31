@@ -84,33 +84,37 @@ export function createModal(id, name, image, type){
     modalContainer.dataset.name = name
     modalContainer.classList.add('modal-container')
     // we create the image container 
+    const modalTopContainer = document.createElement('div')
+    modalTopContainer.classList.add('modal-top-container')
+    backgroundColor(type, modalTopContainer)
+    // here we create the title
+    // heading pokemon id plus name
+    const modalInfoContainerHeading = document.createElement('div')
+    modalInfoContainerHeading.classList.add('modal-info-container-heading')
+    // pokemon id #
+    const pokemonId = document.createElement('span')
+    pokemonId.textContent = '#' + id
+    pokemonId.classList.add('modal-pokemon-id')
+    modalInfoContainerHeading.appendChild(pokemonId)
+    // pokemon name
+    const pokemonName = document.createElement('h3')
+    pokemonName.textContent = name
+    pokemonName.classList.add('modal-pokemon-name')
+    modalInfoContainerHeading.appendChild(pokemonName)
+    // adding headinto info container
+    modalTopContainer.appendChild(modalInfoContainerHeading)
+    // here we create the image
     const modalImageContainer = document.createElement('div')
     modalImageContainer.classList.add('modal-image-container')
-    backgroundColor(type, modalImageContainer)
-    // here we create the image
     const officialArt = document.createElement('img')
-    officialArt.classList.add('image')
+    officialArt.classList.add('modal-image')
     officialArt.src = image
     // we add the image to the image container
     modalImageContainer.appendChild(officialArt)
+    modalTopContainer.appendChild(modalImageContainer)
     // // we create the info container
     // const infoContainer = document.createElement('div')
     // infoContainer.classList.add('info-container')
-    // // heading pokemon id plus name
-    // const infoContainerHeading = document.createElement('div')
-    // infoContainerHeading.classList.add('info-container-heading')
-    // // pokemon id #
-    // const pokemonId = document.createElement('span')
-    // pokemonId.textContent = '#' + id
-    // pokemonId.classList.add('pokemon-id')
-    // infoContainerHeading.appendChild(pokemonId)
-    // // pokemon name
-    // const pokemonName = document.createElement('h3')
-    // pokemonName.textContent = name
-    // pokemonName.classList.add('pokemon-name')
-    // infoContainerHeading.appendChild(pokemonName)
-    // // adding headinto info container
-    // infoContainer.appendChild(infoContainerHeading)
     // // adding type content div
     // const infoContainerType = document.createElement('div')
     // infoContainerType.classList.add('info-container-types')
@@ -127,7 +131,7 @@ export function createModal(id, name, image, type){
     // infoContainer.appendChild(infoContainerType)
     
     // we add the image container and the info container to the card
-    modalContainer.appendChild(modalImageContainer)
+    modalContainer.appendChild(modalTopContainer)
     // modal.appendChild(infoContainer)
 
     modal.appendChild(modalContainer)

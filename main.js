@@ -1,21 +1,22 @@
 import ky from 'https://cdn.skypack.dev/ky?dts'
 import {backgroundColor, createCard, createModal, fillSearchBar} from './js/modules.js'
 
-const BASE_API_URL = 'https://pokeapi.co/api/v2/pokemon'
+const BASE_API_URL = 'https://pokeapi.co/api/v2'
 const mainContainer = document.querySelector('.container.main')
 const searchBarItemsContainer = document.querySelector('.autocomplete-box')
 const searchBar = document.querySelector('#search-bar')
+const regionSelect = document.querySelector('#region__select')
 
 const primaryType = 0
 const secondaryType = 1
 
 async function getPokemons(){
-    const response = await ky.get(`${BASE_API_URL}/?limit=25&offset=25"`).json()
-    
+
+    const response = await ky.get(`${BASE_API_URL}/pokemon/?limit=150`).json()
     const { results } = response
 
     for(let i = 1 ; i<=results.length ; i++){
-        const data = await ky.get(`${BASE_API_URL}/${i}/`).json()
+        const data = await ky.get(`${BASE_API_URL}/pokemon/${i}/`).json()
         const {sprites, types, id, name} = data
 
         let fistType = types[primaryType].type.name
@@ -27,6 +28,8 @@ async function getPokemons(){
         mainContainer.appendChild(card)
         backgroundColor(type, card)
 
+        // card.style.display = 'none'
+
         let item = fillSearchBar(sprites.other.home.front_default, id, name)
         searchBarItemsContainer.appendChild(item)
         searchBarItemsContainer.classList.add('not-show')
@@ -36,7 +39,6 @@ async function getPokemons(){
         card.addEventListener('click', showPokemonDetails)
 
     }
- 
 }
 
 function filterItem(){
@@ -58,7 +60,7 @@ function filterItem(){
 
 async function showPokemonDetails(){
 
-    const data = await ky.get(`${BASE_API_URL}/${this.dataset.name}/`).json()
+    const data = await ky.get(`${BASE_API_URL}/pokemon/${this.dataset.name}/`).json()
     const {sprites, types, id, name} = data
     
     let fistType = types[primaryType].type.name
@@ -70,8 +72,17 @@ async function showPokemonDetails(){
     mainContainer.appendChild(modal)
 
     modal.classList.add('modal--show')
-}
 
+    modal.addEventListener('click', function(event){
+        if (
+            !event.target.matches(".modal-container") && !event.target.closest(".modal-container") // || event.target.closest(".modal-container")
+          ) {
+            modal.classList.remove('modal--show')
+            modal.style.display = "none"
+          }
+        
+    })
+}
 
 
 getPokemons()

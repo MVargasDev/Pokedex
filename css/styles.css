@@ -180,10 +180,42 @@ h3, .pokemon-id{
     height: 90%;
     max-width: 600px;
     background-color: #fcfcfc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-top-container{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-info-container-heading{
+    display: flex;
+    color: #fcfcfc;
+    padding-block-start: 1rem;
+    padding-inline: 2rem;
+    justify-content: space-between;
+}
+
+.modal-pokemon-id, .modal-pokemon-name{
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: capitalize;
 }
 
 .modal-image-container{
-    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.modal-image-container img{
+    height: 100%;
 }
 
 .modal--show{
